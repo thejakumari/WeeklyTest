@@ -1,0 +1,188 @@
+1) Method overloading is  two or more method with same method name and different parameter within the same class.
+
+class Cake{
+
+static void tasty(int noOfPieces)
+{
+System.out.println("No of Pieces:"+noOfPieces);
+}
+static void tasty(int noOfPieces,String name)
+{
+System.out.println("No of Pieces:"+noOfPieces);
+System.out.println("Name:"+name);
+}
+}
+
+
+//Main method
+class CakeKiller{
+public static void main(String[] values)
+{
+System.out.println("Invoking main in CakeKiller");
+Cake.tasty(7);
+Cake.tasty(5,"BlackForestry");
+}
+}
+
+
+
+2)There are four types of variables;
+a)Local variable: It is declared inside the method
+ex:class King{
+public static void main(String[] args)
+{
+int value;
+}
+}
+//Here the int value is an local variable.
+b)Static variable: Variable declared outside the method and inside the class by using static keyword. Static variable will creat only single copy of an object.
+      class Name{
+      static int value;
+}
+c)Instance variable:variable is declared outside the method and inside the class;
+class Think{
+int value;
+} 
+d)Parameter:It is also known as local variable and anything which is written within paranthesis is called as parameter;
+class Name{
+static void teach(int value) 
+}
+//here int value is parameter.
+
+
+3)Stack memory is used for  execution of program. In the code if there is main method then stack memory  creats a stack frame.All the address of the variable is returned to the stack frame.
+   Heap memory consist of Metaspace: used to load class and static variables are stored here.
+Constant pool:used to store the value of variable;
+Instance memory:Store non static methods or variables;
+
+
+4) class Job{
+    String name;
+    int noOfPage;
+    int fontSize;
+  Job(String name)
+{
+  System.out.println("Name:"+this.name);
+this.name=name;
+}
+Job(String name,int noOfPage)
+{
+  System.out.println("Name:"+this.name);
+ System.out.println("noOfPage"+noOfPage);
+
+this.name=name;
+this.noOfPage=noOfPage;
+}
+Job(String name,int noOfPage,int fontSize)
+{
+  System.out.println("Name:"+this.name);
+ System.out.println("noOfPage"+noOfPage);
+System.out.println("Font size:"+fontSize);
+
+this.name=name;
+this.noOfPage=noOfPage;
+this.fontSize=fontSize;
+}
+}
+
+//Main method
+Class JobKiller{
+public static void main(String[] args){
+System.out.println("Invoking main in JobKiller");
+Job job=new Job("Harshi");
+System.out.println(job.name);
+Job job1=new Job("Harshi",2);
+System.out.println(job1.name);
+System.out.println(job1.noOfPage);
+Job job2=new Job("Harshi",2,12);
+System.out.println(job2.name);
+System.out.println(job2.noOfPage);
+System.out.println(job2.fontSize);
+}
+}
+
+
+5)class Cake{
+
+void tasty(int noOfPieces)
+{
+System.out.println("No of Pieces:"+noOfPieces);
+}
+void tasty(int noOfPieces,String name)
+{
+System.out.println("No of Pieces:"+noOfPieces);
+System.out.println("Name:"+name);
+}
+
+}
+
+
+//Main method
+class CakeKiller{
+public static void main(String[] values)
+{
+System.out.println("Invoking main in CakeKiller");
+Cake.tasty(7);
+Cake.tasty(5,"BlackForestry");
+
+6) class Power{
+static String unit;
+static int value;
+
+static void energy(){
+  this.unit="Watt";
+   this.value=45;
+}
+}
+
+//Main 
+class PowerKiller{
+public static void main(String[] args)
+{
+System.out.println("Invoking main in PowerKiller");
+Power power=new Power();
+power.energy();
+}
+}
+
+7)class Job{
+    String name;
+    int noOfPage;
+    int fontSize;
+  Job(String name)
+{
+  System.out.println("Name:"+this.name);
+this.name=name;
+}
+Job(String name,int noOfPage)
+{
+  System.out.println("Name:"+this.name);
+ System.out.println("noOfPage"+noOfPage);
+
+this(name);
+this.noOfPage=noOfPage;
+}
+Job(String name,int noOfPage,int fontSize)
+{
+  this(name,noOfPage)
+this.name=name;
+
+}
+}
+
+//Main method
+Class JobKiller{
+public static void main(String[] args){
+System.out.println("Invoking main in JobKiller");
+Job job=new Job("Harshi");
+System.out.println(job.name);
+Job job1=new Job("Harshi",2);
+System.out.println(job1.name);
+System.out.println(job1.noOfPage);
+Job job2=new Job("Harshi",2,12);
+System.out.println(job2.name);
+System.out.println(job2.noOfPage);
+System.out.println(job2.fontSize);
+}
+}
+
